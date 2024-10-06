@@ -12,19 +12,31 @@
             background-color: #f0f8ff;
             color: #333;
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
+            padding: 0;
         }
 
         .container {
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .left-column, .right-column {
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 800px;
-            margin: 20px;
-            line-height: 1.6;
+            padding: 30px;
+            margin: 10px;
+        }
+
+        .left-column {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .right-column {
+            max-width: 600px;
+            padding-left: 40px;
         }
 
         .photo-section img {
@@ -38,14 +50,16 @@
 
         h1 {
             color: #4169e1;
-            font-size: 2.5rem;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         h2 {
             color: #4169e1;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             border-bottom: 2px solid #4169e1;
             padding-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         p {
@@ -67,82 +81,82 @@
             margin-bottom: 10px;
         }
 
-        a {
+        .links a {
+            display: inline-block;
+            margin: 10px 0;
             text-decoration: none;
             color: #fff;
             background-color: #4169e1;
             padding: 10px 20px;
             border-radius: 5px;
-            font-size: 1rem;
-            display: inline-block;
-            margin-top: 20px;
         }
 
-        a:hover {
+        .links a:hover {
             background-color: #315aa7;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Photo and Intro Section -->
-        <div class="photo-section" style="text-align: center;">
-            <img src="profile.jpg" alt="Your Photo">
+        <!-- Left Column: Photo, Introduction, Links -->
+        <div class="left-column">
+            <div class="photo-section">
+                <img src="profile.jpg" alt="Your Photo">
+            </div>
             <h1>[Your Name]</h1>
-            <p><strong>Position/Title</strong> | Location</p>
-            <p>Brief introduction about yourself. Describe your background, interests, or goals in a few sentences.</p>
+            <p>Short introduction about yourself, your profession, and key interests.</p>
+            
+            <!-- Links to other sites -->
+            <div class="links">
+                <a href="https://github.com/[YourUsername]">GitHub</a>
+                <a href="https://linkedin.com/in/[YourLinkedInProfile]">LinkedIn</a>
+                <a href="mailto:youremail@example.com">Email Me</a>
+            </div>
         </div>
 
-        <!-- Skills Section -->
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Python, JavaScript, C++</li>
-                <li><strong>Web Development:</strong> HTML, CSS, React, Django</li>
-                <li><strong>Data Science:</strong> Pandas, NumPy, Matplotlib</li>
-                <li><strong>Version Control:</strong> Git, GitHub</li>
-            </ul>
-        </div>
+        <!-- Right Column: Experience, Education, Skills, Projects -->
+        <div class="right-column">
+            <!-- Experience Section -->
+            <div class="section">
+                <h2>Experience</h2>
+                <ul>
+                    <li><strong>Software Engineer</strong> | Company Name | Jan 2021 - Present</li>
+                    <p>Description of role, key responsibilities, and achievements.</p>
+                    <li><strong>Data Analyst</strong> | Company Name | Jun 2019 - Dec 2020</li>
+                    <p>Description of role, key responsibilities, and achievements.</p>
+                </ul>
+            </div>
 
-        <!-- Experience Section -->
-        <div class="section">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Software Engineer</strong> | Company Name | Jan 2021 - Present</li>
-                <p>Brief description of your role, key responsibilities, and achievements.</p>
-                <li><strong>Data Analyst</strong> | Company Name | Jun 2019 - Dec 2020</li>
-                <p>Brief description of your role, key responsibilities, and achievements.</p>
-            </ul>
-        </div>
+            <!-- Education Section -->
+            <div class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>Bachelor's in Computer Science</strong> | University Name | Graduated: 2019</li>
+                    <p>Optional details about relevant coursework, honors, etc.</p>
+                </ul>
+            </div>
 
-        <!-- Education Section -->
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Bachelor's in Computer Science</strong> | University Name | Graduated: 2019</li>
-                <p>Optional: Add relevant coursework, honors, or achievements here.</p>
-            </ul>
-        </div>
+            <!-- Skills Section -->
+            <div class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Python, JavaScript, C++</li>
+                    <li><strong>Web Development:</strong> HTML, CSS, React, Django</li>
+                    <li><strong>Data Science:</strong> Pandas, NumPy, Matplotlib</li>
+                    <li><strong>Version Control:</strong> Git, GitHub</li>
+                </ul>
+            </div>
 
-        <!-- Projects Section -->
-        <div class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Project Title</strong> | <a href="https://github.com/[YourUsername]/project1">View on GitHub</a></li>
-                <p>Brief description of the project and technologies used.</p>
-                <li><strong>Another Project</strong> | <a href="https://github.com/[YourUsername]/project2">View on GitHub</a></li>
-                <p>Brief description of the project and technologies used.</p>
-            </ul>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="section">
-            <h2>Contact</h2>
-            <ul>
-                <li><strong>Email:</strong> youremail@example.com</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/[YourUsername]">https://github.com/[YourUsername]</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile">https://linkedin.com/in/yourprofile</a></li>
-            </ul>
+            <!-- Projects Section -->
+            <div class="section">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>Project 1</strong> | <a href="https://github.com/[YourUsername]/project1">View on GitHub</a></li>
+                    <p>Brief description of the project and technologies used.</p>
+                    <li><strong>Project 2</strong> | <a href="https://github.com/[YourUsername]/project2">View on GitHub</a></li>
+                    <p>Brief description of the project and technologies used.</p>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
