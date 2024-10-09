@@ -1,0 +1,371 @@
+/* General Reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding-top: 60px; /* Space for the header */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	flex:1;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px;
+    display: block;
+    height: 100%;
+    line-height: 50px;
+}
+
+nav ul li a:hover {
+    color: #ffa500;
+}
+
+/* About Section */
+#about {
+    background-color: #444; /* Slightly lighter background */
+    color: #ddd;
+    padding: 60px 20px;
+    background-image: url("bg.jpg");
+
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+
+}
+
+.profile-pic {
+    scale: 0.7;
+    width: 200x;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: contain;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 30px;
+    color: #fff;
+    background-color: #333;
+    padding: 12px;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #ffa500; /* Highlight color on hover */
+    transform: scale(1.1);
+}
+
+.social-icon.linkedin {
+    color: #0e76a8;
+}
+
+.social-icon.github {
+    color: #FFFFFF;
+}
+
+.social-icon.scholar {
+    color: #4285F4; /* You can use a Google Scholar color or leave it neutral */
+}
+
+.social-icon.email {
+    color: #d14836;
+}
+
+.sections-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    gap: 0px; /* Space between news and middle section */
+
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%; /* Takes 70% of the container width */
+    color: #b3b6ba;
+}
+/* News Section */
+#news {
+    background-color: #444;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 15%; /* Takes 30% of the container width */
+    margin-left:250px;
+    margin-right: 200px;
+    border: 2px solid #333;
+
+}
+
+.inner-rectangle {
+    border: 2px solid #81c784;
+    padding: 20px;
+    width: 300px; /* Fixed width */
+    height: 120px; /* Fixed height */
+    display: flex; /* Flexbox for centering content inside */
+    justify-content: center; /* Centers the paragraph horizontally */
+    align-items: center; /* Centers the paragraph vertically */
+    border-radius: 8px; /* Optional: rounds the corners */
+    background-color: #444; /* Optional: background color for visibility */
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+    margin-top: auto;
+}
+
+/* SkillsSection */
+#skills-section {
+    padding:  40px 20px;
+    background-color: #333;
+    color: #fff;
+
+}
+#skills-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill-bar {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+}
+
+.skill-level {
+  background: linear-gradient(to right, #4caf50, #81c784);
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* education section */
+#education-section {
+  padding: 0px 0px;
+  background-color: #333;
+  color: #fff;
+
+}
+
+#education-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+}
+
+.education-list li {
+  margin-bottom: 20px;
+  border-left: 4px solid #81c784;
+  padding-left: 15px;
+}
+
+.education-list h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.education-list p {
+  margin: 5px 0;
+}
+
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px 0;
+}
+
+.interests, education {
+    background-color: #333; /* Dark background */
+    color: #ecf0f1; /* Light text */
+
+    margin: 0 50px; /* Space between the two containers */
+    border-radius: 8px; /* Rounded corners */
+    width: 300px; /* Fixed width for the containers */
+}
+
+.interests ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    font-size: 22px; /* Adjust font size as needed */
+}
+
+.interests ul li {
+    position: relative; /* For positioning the custom bullet */
+    padding-left: 20px; /* Space for the custom bullet */
+}
+
+.interests li::before {
+    content: ''; /* Creates a pseudo-element */
+    position: absolute; /* Positioning the custom bullet */
+    left: 0; /* Aligns it to the left */
+    top: 50%; /* Centers it vertically */
+    transform: translateY(-50%); /* Adjusts vertical position */
+    width: 8px; /* Bullet width */
+    height: 8px; /* Bullet height */
+    border-radius: 50%; /* Makes it circular */
+    background-color: #81c784; /* Change this to your desired bullet color */
+}
+
+.interests h2 {
+    margin-bottom: 20px
+
+}
+
+#my-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centers the rectangle horizontally */
+    align-items: center; /* Centers the rectangle vertically */
+    height: calc(100vh - 100px); /* Adjust height to leave space for the header */
+    margin-top: 100px; /* Adds space for the header */
+}
+
+.fancy-download-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #81c784; /* Matches your contrast color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px; /* Rounder corners for a modern look */
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add some shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fancy-download-btn i {
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Add a hover effect */
+.fancy-download-btn:hover {
+    background-color: #66bb6a; /* Darker green on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Button animation: subtle expanding effect */
+.fancy-download-btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.fancy-download-btn:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
