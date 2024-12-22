@@ -1,0 +1,465 @@
+body {
+      margin: 0;
+      padding: 0;
+      background-color: #333; /* Dark background */
+      color: #fff; /* Text color for contrast */
+      font-family: Arial, sans-serif;
+   }
+
+/* Responsive container */
+.container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #444; /* Slightly lighter than the body */
+      padding: 10px 20px;
+      position: sticky; /* Stays at the top */
+      top: 0;
+      z-index: 1000;
+    }
+
+
+.navbar a {
+      color: #81c784; /* Highlight color */
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 30px;
+    }
+
+.navbar a:hover {
+      text-decoration: underline;
+    }
+/* --- Navigation Bar --- */
+
+
+/* About Section */
+#about {
+    background-color: #444; /* Slightly lighter background */
+    color: #ddd;
+    padding: 20px;
+    background-image: url("bg.jpg");
+}
+
+#about h2 {
+    margin-bottom: 0;
+    }
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-top: 0;
+}
+
+.profile-pic {
+    scale: 0.8;
+    width: 200x;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 85px;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.about-text {
+    max-width: 600px;
+    display: flex; /* Make the text container also a flex container */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically align the text */
+}
+
+.about-text h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 30px;
+    color: #fff;
+    background-color: #333;
+    padding: 12px;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #ffa500; /* Highlight color on hover */
+    transform: scale(1.1);
+}
+
+.social-icon.linkedin {
+    color: #0e76a8;
+}
+
+.social-icon.github {
+    color: #FFFFFF;
+}
+
+.social-icon.scholar {
+    color: #4285F4; /* You can use a Google Scholar color or leave it neutral */
+}
+
+.social-icon.email {
+    color: #d14836;
+}
+
+/* Download Resume Button */
+.fancy-download-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #81c784; /* Matches your contrast color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px; /* Rounder corners for a modern look */
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add some shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    max-width: 250px;
+}
+
+.fancy-download-btn i {
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Add a hover effect */
+.fancy-download-btn:hover {
+    background-color: #66bb6a; /* Darker green on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Button animation: subtle expanding effect */
+.fancy-download-btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.fancy-download-btn:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* --- End Of Download Resume Button --- */
+
+
+
+
+
+
+
+
+
+
+/* Quick Resume */
+.quick-resume {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      gap: 40px;
+    }
+
+.quick-resume h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ddd;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+.cards-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+/* Cards */
+.card {
+  background-color: #444;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly lower */
+  animation: fadeInUp 2s ease forwards; /* Animate into place */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Starting position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
+.card:nth-child(1) {
+    animation-delay: 0s;
+  }
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+
+.card h3 {
+      margin-bottom: 15px;
+      color: #81c784;
+    }
+
+.card ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+.card ul li {
+      margin-bottom: 8px;
+    }
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Intensifies the shadow */
+}
+
+
+
+ .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #333; /* Adjust based on your theme */
+  border-radius: 50px;
+  max-width: 35%; /* Limits width to 90% of the parent container */
+  margin-left: auto; /* Centers the section horizontally */
+  margin-right: auto; /* Centers the section horizontally */
+}
+
+.project-section h2 {
+  color: #81c784; /* Your preferred accent color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure horizontal scrolling */
+  gap: 15px; /* Spacing between cards */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.project-container::-webkit-scrollbar {
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+.project-container::-webkit-scrollbar-thumb {
+  background: #81c784; /* Thumb color */
+  border-radius: 10px;
+}
+
+.project-container::-webkit-scrollbar-track {
+  background: #444; /* Track color */
+}
+
+.card {
+  background-color: #444;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px; /* Equal card width */
+  flex-shrink: 0; /* Prevent shrinking */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Enlarge slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.pcard {
+  background-color: #444;
+  border-radius: 10px;
+  width: 250px;
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.pcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.pcard-header {
+  width: 100%;
+  height: 80px; /* Adjust height for header size */
+  overflow: hidden; /* Ensure image doesn't overflow */
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.pcard-header img {
+  width: 100%; /* Ensure the image takes the full width of the header */
+  height: 100%; /* Ensure the image takes the full height of the header */
+  object-fit: cover; /* Crop the image to maintain aspect ratio */
+}
+
+.pcard-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.pcard-logo img {
+  width: 40px; /* Adjust based on your logo size */
+  height: auto;
+}
+
+
+.pcard-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pcard-title {
+  color: #81c784;
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.pcard-description {
+  color: #ddd;
+  font-size: 14px;
+  margin: 0;
+}
+
+.pcard-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.pcard-footer a {
+  color: #81c784;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.pcard-footer a:hover {
+  color: #66bb6a; /* Darker shade on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Responsive content container */
+.container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+@media (max-width: 768px) {
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+}
+
+

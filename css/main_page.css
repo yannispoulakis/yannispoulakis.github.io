@@ -1,0 +1,89 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Timeline container */
+/* Centered Header */
+.timeline-header {
+    text-align: center;
+    margin-bottom: -50px;
+}
+
+.timeline-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.timeline-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ddd;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Timeline line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 10;
+    left: 50%;
+    height: 85%;
+    border-left: 3px solid #ddd;
+    transform: translateX(-70%);
+}
+
+/* Each timeline item */
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+/* Date section of each item */
+.timeline-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ddd;
+    position: absolute;
+    left: -60px;
+    top: 10px;
+}
+
+/* Content of each item */
+.timeline-content {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Optional: Add a hover effect for each item */
+.timeline-item:hover .timeline-content {
+    background-color: #f9f9f9;
+}

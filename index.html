@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Simple Website with Dark Background and Navigation">
-    <title>Simple Website</title>
-    <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal GitHub Page</title>
+  <link rel="stylesheet" href="style_2.css">
+  <link rel="stylesheet" href="css/main_page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Background color for the whole page */
+  </style>
 </head>
+
+
 <body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+  </div>
 
-<header>
-    <nav>
-        <ul>
-            <li><a href="#about">Blog</a></li>
-            <li><a href="#news">CV</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#projects">Projects</a></li>
-
-        </ul>
-    </nav>
-</header>
-
-
-<section id="about">
+  <section id="about">
     <h1 style="text-align:center; font-size:50px;">Welcome to my Github page!</h1>
-    <br>
+
     <div class="about-container">
         <img src="poulakis_profile_pic.jpg" alt="Profile Picture" class="profile-pic">
         <div class="about-text">
@@ -50,61 +50,82 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-              <a href="path/to/your/resume.pdf" download="Resume" class="fancy-download-btn">
+              <a href="POULAKIS_YANNIS_CV.pdf" download="Yannis_Poulakis_CV" class="fancy-download-btn">
                   <i class="fas fa-download"></i> Download Resume
     </a>
         </div>
     </div>
 </section>
-<div class="sections-container">
-    <section id="news" >
-        <h2>News</h2>
-        <br>
-        <div class="inner-rectangle">
-            <p>Our paper on bike demand forecasting and redistribution has just been submitted! check in for news :)</p>
+
+<!-- Quick Resume Section -->
+  <div class="quick-resume">
+    <h2> Quick Info </h2>
+    <div class="cards-container">
+      <!-- Education Card -->
+      <div class="card">
+        <h3>Education</h3>
+        <ul>
+          <li>Bachelor of Science in Computer Science</li>
+          <li>University of XYZ</li>
+          <li>Graduated: 2020</li>
+        </ul>
+      </div>
+
+      <!-- Interests Card -->
+      <div class="card">
+        <h3>Interests</h3>
+        <ul>
+          <li>Data Science</li>
+          <li>Machine Learning</li>
+          <li>Dungeons & Dragons</li>
+        </ul>
+      </div>
+
+      <!-- Skills Card -->
+      <div class="card">
+        <h3>Skills</h3>
+        <ul>
+          <li>Python</li>
+          <li>Data Visualization</li>
+          <li>Clustering Algorithms</li>
+          <li>Web Development</li>
+        </ul>
+      </div>
         </div>
+  </div>
 
 
-    </section>
-    <div class="center-container">
-        <div class="interests">
-            <h2>My Interests</h2>
-            <ul>
-                <li>AutoML</li>
-                <li>AI in logistics / Vehicle Redistribution</li>
-                <li>Data Visualization</li>
-                <li>Fairness in AI</li>
-                <li>Semantics</li>
-                <li>Energy Efficient ML</li>
-            </ul>
+
+  <div class="timeline-header">
+    <h2> News </h2>
+  </div>
+
+
+<div class="timeline">
+
+    <div class="timeline-item">
+        <div class="timeline-date">2024-12-01</div>
+        <div class="timeline-content">
+            <h3>Event Title</h3>
+            <p>Description of the event goes here.</p>
         </div>
-        <section id="education-section">
-              <h2>Education</h2>
-              <ul class="education-list">
-                <li>
-                  <h3>PhD Candidate in AutoML</h3>
-                  <p>University of Piraeus (2019 - Present)</p>
-                  <p>Focused on automated machine learning for clusterin.</p>
-                </li>
-                <li>
-                  <h3>Master of Science in Big Data and Analytics</h3>
-                  <p>University of Piraeus (2017 - 2019)</p>
-                  <p>Technologies for handling big amount of data, e.g. Kafka , Spark and NoSQL systems</p>
-                </li>
-                <li>
-                  <h3>Bachelor of Science in Statistics and Insurance Sciences</h3>
-                  <p>University of Piraeus (2010 - 2016)</p>
-                  <p>Studies on actuarian sciences. Statistics, analytical and insurance related mathematics</p>
-                </li>
-              </ul>
-            </section>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-date">2024-12-05</div>
+        <div class="timeline-content">
+            <h3>Another Event Title</h3>
+            <p>Details about this event go here.</p>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-date">2024-12-10</div>
+        <div class="timeline-content">
+            <h3>Third Event</h3>
+            <p>Some description of the third event.</p>
+        </div>
     </div>
 </div>
 
-
-<footer>
-    <p>&copy; 2024 Your Website. All rights reserved.</p>
-</footer>
 </body>
-</html>
 
+</html>

@@ -146,8 +146,8 @@ nav ul li a:hover {
 
 .sections-container {
     display: flex;
-    height: 100vh; /* Full viewport height */
-    gap: 0px; /* Space between news and middle section */
+    /* height: 50vh; /* Full viewport height */
+    /* gap: 0px; /* Space between news and middle section */
 
 }
 
@@ -368,4 +368,82 @@ footer {
 
 .fancy-download-btn:hover:before {
     transform: translate(-50%, -50%) scale(1);
+}
+
+#projects-section {
+    padding: 60px 20px;
+    background-color: #444; /* Matches the site's dark theme */
+    color: #fff;
+    text-align: center;
+}
+
+#projects-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #81c784; /* Accent color */
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.project-card {
+    background-color: #333;
+    border-radius: 10px;
+    width: 600px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align content within cards */
+    display: flex;
+    flex-direction: column; /* Stacks image, button, and text */
+    align-items: center;
+    padding: 20px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Optional for rounded corners */
+    margin-bottom: 15px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #81c784;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #66bb6a; /* Darker green on hover */
+    transform: scale(1.1);
+}
+
+.project-content {
+    text-align: center; /* Centers text within the card */
+}
+
+.project-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #81c784; /* Accent color */
+}
+
+.project-content p {
+    font-size: 16px;
+    line-height: 1.5;
 }
